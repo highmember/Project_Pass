@@ -1,5 +1,7 @@
-<mat-card class="card-Main">
-<mat-card class="card-PM">
+<div fxLayout="row">
+<mat-card class="card-Main">  
+<div fxLayout="row">
+<mat-card>
   <mat-card-header>
     <mat-card-title>ID_Project:</mat-card-title><mat-list-item>00001</mat-list-item> 
   </mat-card-header>
@@ -22,28 +24,19 @@
     <button mat-button>Confirm</button>
   </mat-card-actions>
 </mat-card>
+</div>
 
-<mat-card class="card-Pin">
+<div fxLayout="row">
+<mat-card>
     <mat-card-header>
       <mat-card-title>มีแบบเป็นแบบไหน ?</mat-card-title>
     </mat-card-header>
     <mat-radio-group>
         <mat-radio-button value="1">แบบเป็นเอกสาร</mat-radio-button>
-        <mat-radio-button value="2">แบบเป็นไพล์</mat-radio-button>
-    
-    <mat-expansion-panel>
-      <mat-expansion-panel-header>
-        <mat-panel-title>
-          Select Project Maneger (PM)
-        </mat-panel-title>
-      </mat-expansion-panel-header>
-      <mat-radio-group class="example-radio-group" [(ngModel)]="PM">
-          <mat-radio-button class="example-radio-button" *ngFor="let PM of ProjectManeger" [value]="PM">
-            {{PM}}
-          </mat-radio-button>
-        </mat-radio-group>
-        <div class="example-selected-value">Project Maneger (PM) is: {{PM}}</div>
-    </mat-expansion-panel>
+        <mat-radio-button value="2">แบบเป็นไพล์
+          <button mat-button (click)="inputFile.click()">Import file</button> {{ inputFile.value }}
+          <input #inputFile type="file" [style.display]="'none'">
+  </mat-radio-button>
   </mat-radio-group>
       
     <!-- <mat-card-content>
@@ -57,5 +50,44 @@
       <button mat-button>Confirm</button>
     </mat-card-actions>
   </mat-card>
+</div>
 </mat-card>
 
+</div>
+<mat-card class="card-Main">
+<div fxLayout="row">
+<mat-card class="card-Scope">
+  <mat-card-content>
+    <h2 class="example-h2">Result</h2>
+    <div class="center">
+    <mat-progress-spinner class="example-margin" 
+        [color]="color"
+        [value]="value">
+        
+    </mat-progress-spinner>
+    {{value}} % </div>
+  </mat-card-content>
+</mat-card>
+
+<mat-card class="card-Scope">
+    <mat-card-content>
+      <h2 class="example-h2">Progress</h2>
+      <div class="center">
+      <mat-progress-spinner class="example-margin" 
+          [color]="color2"
+          [value]="value2">
+          
+      </mat-progress-spinner>
+      {{value2}} % </div>
+    </mat-card-content>
+  </mat-card>
+</div>
+</mat-card>
+
+<!-- <mat-card>
+  <mat-form-field>
+  <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker></mat-datepicker>
+</mat-form-field>
+</mat-card> -->

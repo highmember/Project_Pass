@@ -1,12 +1,23 @@
 .card-PM {
-
+   
   }
 .card-Pin {
-    
+
 }
+.example-h2 {
+  margin: 10px;
+}
+
+.example-margin {
+  margin: auto;
+}
+
 .card-Main {
     max-width: 900px;
-    position: fixed;
+    position: relative;
+}
+.card-Scope{
+  max-width: 400px;
 }
   .example-container {
     display: flex;
@@ -32,4 +43,7 @@
     margin: 15px 0;
   }
 
-  
+  .center{
+    text-align: center;
+    align-items: center;
+  }
