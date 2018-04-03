@@ -30,7 +30,7 @@ export class SaleComponent implements OnInit {
     }
   ];
   color2 ='warn';
-  value2 = 40;
+  value2 = 50;
   color = 'primary';
   value = 20;
   

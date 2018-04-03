@@ -32,8 +32,8 @@
       <mat-card-title>มีแบบเป็นแบบไหน ?</mat-card-title>
     </mat-card-header>
     <mat-radio-group>
-        <mat-radio-button value="1">แบบเป็นเอกสาร</mat-radio-button>
-        <mat-radio-button value="2">แบบเป็นไพล์
+        <mat-radio-button value="1" color="primary">แบบเป็นเอกสาร</mat-radio-button>
+        <mat-radio-button value="2" color="primary">แบบเป็นไพล์
           <button mat-button (click)="inputFile.click()">Import file</button> {{ inputFile.value }}
           <input #inputFile type="file" [style.display]="'none'">
   </mat-radio-button>
