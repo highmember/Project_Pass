@@ -23,12 +23,11 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatSliderModule} from '@angular/material/slider';
 import 'hammerjs';
 import { enableProdMode } from '@angular/core';
+
+import { MatNativeDateModule } from '@angular/material';
+import { SaleDialogComponent } from './sale/sale-dialog.component';
 enableProdMode();
 @NgModule({
-  declarations: [
-    AppComponent,
-    SaleComponent
-  ],
   imports: [
     BrowserModule,
     FormsModule,
@@ -45,9 +44,17 @@ enableProdMode();
     MatIconModule,
     MatDatepickerModule,
     MatSliderModule,
-
+    MatNativeDateModule,
   ],
-  providers: [ ],
+  declarations: [
+    AppComponent,
+    SaleComponent,
+    SaleDialogComponent
+  ],
+  entryComponents: [
+    SaleDialogComponent
+  ],
+  providers: [MatDatepickerModule ],
   bootstrap: [AppComponent]
 })
 
