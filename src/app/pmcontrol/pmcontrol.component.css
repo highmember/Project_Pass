@@ -1,0 +1,7 @@
+.card-Main {
+    max-width: 900px;
+    position: relative;
+}
+mat-grid-tile {
+    background: lightblue;
+  }
