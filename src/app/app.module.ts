@@ -23,11 +23,38 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatSliderModule} from '@angular/material/slider';
 import 'hammerjs';
 import { enableProdMode } from '@angular/core';
-
+import { NgxStepperModule } from 'ngx-stepper';
 import { MatNativeDateModule } from '@angular/material';
 import { SaleDialogComponent } from './sale/sale-dialog.component';
+import {MatStepperModule} from '@angular/material/stepper';
+import {
+  MatAutocompleteModule,
+  MatCheckboxModule,
+  MatChipsModule,
+  MatDialogModule,
+  MatDividerModule,
+  MatGridListModule,
+  MatMenuModule,
+  MatPaginatorModule,
+  MatProgressBarModule,
+  MatRippleModule,
+  MatSelectModule,
+  MatSidenavModule,
+  MatSlideToggleModule,
+  MatSnackBarModule,
+  MatSortModule,
+  MatTabsModule,
+  MatToolbarModule,
+  MatTooltipModule,
+} from '@angular/material';
+import { StepsaleComponent } from './stepsale/stepsale.component';
+import { Stepsale2Component } from './stepsale/stepsale2.component';
 enableProdMode();
+
+
+
 @NgModule({
+  
   imports: [
     BrowserModule,
     FormsModule,
@@ -45,11 +72,19 @@ enableProdMode();
     MatDatepickerModule,
     MatSliderModule,
     MatNativeDateModule,
+    MatStepperModule,HttpModule,
+    HttpClientModule,
+    MatNativeDateModule,
+    ReactiveFormsModule,
+    NgxStepperModule,
+    MatAutocompleteModule
   ],
   declarations: [
     AppComponent,
     SaleComponent,
-    SaleDialogComponent
+    SaleDialogComponent,
+    StepsaleComponent,
+    Stepsale2Component,
   ],
   entryComponents: [
     SaleDialogComponent
@@ -59,3 +94,5 @@ enableProdMode();
 })
 
 export class AppModule { }
+
+platformBrowserDynamic().bootstrapModule(AppModule);
