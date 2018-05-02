@@ -10,15 +10,14 @@ import { MatDialog } from '@angular/material';
 })
 export class SaleComponent implements OnInit {
   PM: string;
+  
 
   constructor(
-    private dialog: MatDialog,
+    private dialog: MatDialog, 
   ) { }
 
   ngOnInit() {
-
   }
-
   ProjectManeger = [
     'MR.Wichat Jakawan',
     'MR.AAAAA AAAAAA',
@@ -39,6 +38,7 @@ export class SaleComponent implements OnInit {
       updated: new Date('1/28/16'),
     }
   ];
+
   color2 = 'warn';
   value2 = 40;
   color = 'primary';

@@ -35,6 +35,7 @@
         <mat-radio-button value="1">แบบเป็นเอกสาร</mat-radio-button>
         <mat-radio-button value="2">แบบเป็นไพล์
           <button mat-raised-button color="primary" (click)="inputFile.click()">Import file</button> {{ inputFile.value }}
+
           <input #inputFile type="file" [style.display]="'none'">
   </mat-radio-button>
   </mat-radio-group>
@@ -91,13 +92,3 @@
 <mat-card-actions>
     <button mat-raised-button color="warn" (click)="openDialog()">Confirm</button>
   </mat-card-actions>
-
-
-
-<!-- <mat-card>
-  <mat-form-field>
-  <input matInput [matDatepicker]="picker" placeholder="Choose a date">
-  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-  <mat-datepicker #picker></mat-datepicker>
-</mat-form-field>
-</mat-card> -->
