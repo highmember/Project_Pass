@@ -21,7 +21,7 @@
   </mat-expansion-panel>
  
   <mat-card-actions>
-    <button mat-button>Confirm</button>
+    <button mat-raised-button color="accent">Confirm</button>
   </mat-card-actions>
 </mat-card>
 </div>
@@ -32,9 +32,10 @@
       <mat-card-title>มีแบบเป็นแบบไหน ?</mat-card-title>
     </mat-card-header>
     <mat-radio-group>
-        <mat-radio-button value="1" color="primary">แบบเป็นเอกสาร</mat-radio-button>
-        <mat-radio-button value="2" color="primary">แบบเป็นไพล์
-          <button mat-button (click)="inputFile.click()">Import file</button> {{ inputFile.value }}
+        <mat-radio-button value="1">แบบเป็นเอกสาร</mat-radio-button>
+        <mat-radio-button value="2">แบบเป็นไพล์
+          <button mat-raised-button color="primary" (click)="inputFile.click()">Import file</button> {{ inputFile.value }}
+
           <input #inputFile type="file" [style.display]="'none'">
   </mat-radio-button>
   </mat-radio-group>
@@ -47,7 +48,7 @@
       </p>
     </mat-card-content> -->
     <mat-card-actions>
-      <button mat-button>Confirm</button>
+      <button mat-raised-button color="accent">Confirm</button>
     </mat-card-actions>
   </mat-card>
 </div>
@@ -82,12 +83,12 @@
     </mat-card-content>
   </mat-card>
 </div>
+<mat-form-field>
+    <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
 </mat-card>
-
-<!-- <mat-card>
-  <mat-form-field>
-  <input matInput [matDatepicker]="picker" placeholder="Choose a date">
-  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-  <mat-datepicker #picker></mat-datepicker>
-</mat-form-field>
-</mat-card> -->
+<mat-card-actions>
+    <button mat-raised-button color="warn" (click)="openDialog()">Confirm</button>
+  </mat-card-actions>

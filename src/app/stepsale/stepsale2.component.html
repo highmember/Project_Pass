@@ -1,0 +1,71 @@
+<div class="big">
+<h1>Detail</h1>
+<mat-card class="big-card">
+    <mat-card class="left-card">
+            <form class="example-form">
+                    <mat-form-field class="example-full-width">
+                      <input matInput placeholder="Code" aria-label="codes" [matAutocomplete]="auto" [formControl]="codeCtrl"
+                      #Code
+                        (keyup.enter)="add(Code.value)"
+                        (blur)="add(Code.value);">
+                      <mat-autocomplete #auto="matAutocomplete">
+                        <mat-option *ngFor="let state of filteredCodes | async" [value]="state.codes">
+                          <span>{{ state.codes }}</span> |
+                          <small>Population: {{state.detail}}</small>
+                        </mat-option>
+                      </mat-autocomplete>
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Customer_Name" aria-label="name" [matAutocomplete]="auto" [formControl]="nameCtrl"
+                        #Cus_Name
+                            (keyup.enter)="add(Cus_Name.value)"
+                            (blur)="add(Cus_Name.value);">
+                        <mat-autocomplete #auto="matAutocomplete">
+                          <mat-option *ngFor="let cusN of filteredName | async" [value]="cusN.name">
+                            <span>{{ cusN.name }}</span>
+                          </mat-option>
+                        </mat-autocomplete>
+                      </mat-form-field>
+
+                      <div class="example-container">
+                          <mat-form-field>
+                            <input matInput placeholder="Tel"
+                            #Tel
+                            (keyup.enter)="add(Tel.value)"
+                            (blur)="add(Tel.value);">
+                          </mat-form-field>
+                          <mat-form-field>
+                            <input matInput placeholder="Address"
+                            #Address
+                            (keyup.enter)="add(Address.value)"
+                            (blur)="add(Address.value);">
+                            </mat-form-field>
+                            <div fxFlex></div>
+                            
+                        </div>
+                        <mat-card-actions>
+                            <button mat-raised-button color="primary"  (click)="onSave(Code.value, Cus_Name.value, Tel.value, Address.value)">Save</button>
+                        </mat-card-actions>
+                    <br />
+                  
+                  </form>
+    </mat-card>
+<mat-card class="right-card">
+    <mat-card-header>
+        <mat-card-title>มีแบบเป็นแบบไหน ?</mat-card-title>
+      </mat-card-header>
+      <mat-radio-group>
+          <mat-radio-button value="1">แบบเป็นเอกสาร</mat-radio-button><br>
+          <mat-radio-button value="2">แบบเป็นไพล์
+            <button mat-raised-button color="primary" (click)="inputFile.click()">Import file</button> {{ inputFile.value }}
+  
+            <input #inputFile type="file" [style.display]="'none'">
+    </mat-radio-button>
+    </mat-radio-group>
+
+</mat-card> 
+<button mat-raised-button color="primary" onclick="window.location='stepsale.component.html'">Next</button>
+</mat-card>
+
+</div>

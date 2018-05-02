@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {FormControl} from '@angular/forms';
+import { FormControl } from '@angular/forms';
+import { SaleDialogComponent } from './sale-dialog.component';
+import { MatDialog } from '@angular/material';
 
 @Component({
   selector: 'app-sale',
@@ -8,7 +10,14 @@ import {FormControl} from '@angular/forms';
 })
 export class SaleComponent implements OnInit {
   PM: string;
+  
 
+  constructor(
+    private dialog: MatDialog, 
+  ) { }
+
+  ngOnInit() {
+  }
   ProjectManeger = [
     'MR.Wichat Jakawan',
     'MR.AAAAA AAAAAA',
@@ -29,18 +38,25 @@ export class SaleComponent implements OnInit {
       updated: new Date('1/28/16'),
     }
   ];
-  color2 ='warn';
-  value2 = 50;
+
+  color2 = 'warn';
+  value2 = 40;
   color = 'primary';
   value = 20;
-  
-  
-  startDate = new Date(1990, 0, 1);
-  constructor() { }
 
-  ngOnInit() {
+  startDate = new Date(1990, 0, 1);
+  openDialog(): void {
+    const dialogRef = this.dialog.open(SaleDialogComponent, {
+      width: '750px',
+      data: {
+      }
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      if (result !== undefined) {
+
+      }
+    });
   }
 
 }
 
- 
