@@ -26,6 +26,11 @@ import { enableProdMode } from '@angular/core';
 
 import { MatNativeDateModule } from '@angular/material';
 import { SaleDialogComponent } from './sale/sale-dialog.component';
+import { PmcontrolComponent } from './pmcontrol/pmcontrol.component';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+import { PmmatDialogComponent } from './pmcontrol/pmcontrol-dialog.component';
+
 enableProdMode();
 @NgModule({
   imports: [
@@ -45,14 +50,19 @@ enableProdMode();
     MatDatepickerModule,
     MatSliderModule,
     MatNativeDateModule,
+    MatGridListModule,
+    MatProgressBarModule,
   ],
   declarations: [
     AppComponent,
     SaleComponent,
-    SaleDialogComponent
+    SaleDialogComponent,
+    PmcontrolComponent,
+    PmmatDialogComponent
   ],
   entryComponents: [
-    SaleDialogComponent
+    SaleDialogComponent,
+    PmmatDialogComponent
   ],
   providers: [MatDatepickerModule ],
   bootstrap: [AppComponent]
