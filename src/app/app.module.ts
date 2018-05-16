@@ -23,15 +23,16 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatSliderModule} from '@angular/material/slider';
 import 'hammerjs';
 import { enableProdMode } from '@angular/core';
-import { NgxStepperModule } from 'ngx-stepper';
+// import { NgxStepperModule } from 'ngx-stepper';
 import { MatNativeDateModule } from '@angular/material';
 import { SaleDialogComponent } from './sale/sale-dialog.component';
 import { PmcontrolComponent } from './pmcontrol/pmcontrol.component';
-import {MatGridListModule} from '@angular/material/grid-list';
-import {MatProgressBarModule} from '@angular/material/progress-bar';
 import { PmmatDialogComponent } from './pmcontrol/pmcontrol-dialog.component';
 
+import { StorematDialogComponent } from './store/store-dialog.component';
+
 import {MatStepperModule} from '@angular/material/stepper';
+
 import {
   MatAutocompleteModule,
   MatCheckboxModule,
@@ -51,9 +52,19 @@ import {
   MatTabsModule,
   MatToolbarModule,
   MatTooltipModule,
+  
+  
+  
+
+
+
 } from '@angular/material';
 import { StepsaleComponent } from './stepsale/stepsale.component';
 import { Stepsale2Component } from './stepsale/stepsale2.component';
+import { Sale2Component } from './sale2/sale2.component';
+import { SaleViewComponent } from './sale-view/sale-view.component';
+import { StoreComponent } from './store/store.component';
+
 enableProdMode();
 @NgModule({
   
@@ -80,21 +91,30 @@ enableProdMode();
     HttpClientModule,
     MatNativeDateModule,
     ReactiveFormsModule,
-    NgxStepperModule,
-    MatAutocompleteModule
+    // NgxStepperModule,
+    MatAutocompleteModule,
+    
+    
+    
+  
   ],
   declarations: [
     AppComponent,
     SaleComponent,
     SaleDialogComponent,
     PmcontrolComponent,
-    PmmatDialogComponent
+    PmmatDialogComponent,
     StepsaleComponent,
     Stepsale2Component,
+    Sale2Component,
+    SaleViewComponent,
+    StoreComponent,
+    StorematDialogComponent,
   ],
   entryComponents: [
     SaleDialogComponent,
-    PmmatDialogComponent
+    PmmatDialogComponent,
+    StorematDialogComponent,
   ],
   providers: [MatDatepickerModule ],
   bootstrap: [AppComponent]

@@ -1,0 +1,59 @@
+<div style="width:80%; margin:0 auto;">
+  <div class="example-container mat-elevation-z8">
+    <mat-table #table [dataSource]="dataSource" >
+  
+      <!--- Note that these columns can be defined in any order.
+            The actual rendered columns are set as a property on the row definition" -->
+  
+      <!-- projectno Column -->
+      <ng-container matColumnDef="projectno">
+        <mat-header-cell *matHeaderCellDef> ID_Project </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.projectno}} </mat-cell>
+      </ng-container>
+  
+      <!-- Name Column -->
+      <ng-container matColumnDef="name">
+        <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+      </ng-container>
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="materialid">
+        <mat-header-cell *matHeaderCellDef> Material ID </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.materialid}} </mat-cell>
+      </ng-container>
+  
+      <!-- amount Column -->
+      <ng-container matColumnDef="amount">
+        <mat-header-cell *matHeaderCellDef> Amount </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.amount}} </mat-cell>
+      </ng-container>
+
+      <!-- stock Column -->
+      <ng-container matColumnDef="stock">
+        <mat-header-cell *matHeaderCellDef> Stock </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.stock}} </mat-cell>
+      </ng-container>
+
+
+  
+       <!-- edit Column  -->
+       <ng-container matColumnDef="editmat">
+          <mat-header-cell *matHeaderCellDef> Edit </mat-header-cell>
+          <mat-cell *matCellDef="let element"> 
+              <section class="example-section">
+                <button mat-raised-button color="warn" (click)="openDialog()">Edit</button>
+                
+              
+              </section>
+          </mat-cell>
+        </ng-container>
+  
+     
+  
+    
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+  </div>
+  </div>
