@@ -27,10 +27,7 @@ import { NgxStepperModule } from 'ngx-stepper';
 import { MatNativeDateModule } from '@angular/material';
 import { SaleDialogComponent } from './sale/sale-dialog.component';
 import { PmcontrolComponent } from './pmcontrol/pmcontrol.component';
-import {MatGridListModule} from '@angular/material/grid-list';
-import {MatProgressBarModule} from '@angular/material/progress-bar';
 import { PmmatDialogComponent } from './pmcontrol/pmcontrol-dialog.component';
-
 import {MatStepperModule} from '@angular/material/stepper';
 import {
   MatAutocompleteModule,
@@ -54,6 +51,7 @@ import {
 } from '@angular/material';
 import { StepsaleComponent } from './stepsale/stepsale.component';
 import { Stepsale2Component } from './stepsale/stepsale2.component';
+import { ManagerComponent } from './manager/manager.component';
 enableProdMode();
 @NgModule({
   
@@ -88,9 +86,10 @@ enableProdMode();
     SaleComponent,
     SaleDialogComponent,
     PmcontrolComponent,
-    PmmatDialogComponent
+    PmmatDialogComponent,
     StepsaleComponent,
     Stepsale2Component,
+    ManagerComponent,
   ],
   entryComponents: [
     SaleDialogComponent,
