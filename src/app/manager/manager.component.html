@@ -1,0 +1,52 @@
+<div class="big">
+<mat-card class="order_card">
+  <h1>Order</h1>
+  <mat-card-header>
+    <mat-card-title>ID_Project:</mat-card-title><mat-list-item>00001</mat-list-item> 
+  </mat-card-header>
+
+  <mat-card class="inorder_card">
+      <mat-list>
+          <h2 mat-subheader>File</h2>
+          <mat-list-item *ngFor="let file of files">
+            <h5 mat-line>{{file.name}}</h5><input matInput placeholder="Company (disabled)" disabled class="input_order" [value]="file.amount">
+          </mat-list-item>
+        </mat-list>
+  </mat-card>
+
+
+</mat-card>
+<!-- ---------------------------------------^order------------------------------------------------------------------- -->
+
+<mat-card class="stock_card">
+    <mat-card-header>
+        <mat-card-title><h1>In_stock</h1></mat-card-title>
+        <mat-card-subtitle>จำนวนชิ้นงานที่อยู่ในโรง</mat-card-subtitle>
+      </mat-card-header>
+    <mat-card class="inorder_card">
+        <mat-list>
+            <h2 mat-subheader>File</h2>
+            <mat-list-item *ngFor="let file of files">
+              <h5 mat-line>{{file.name}}</h5><input matInput placeholder="Company (disabled)" disabled class="input_order" [value]="file.workamount">
+            </mat-list-item>
+          </mat-list>
+    </mat-card>
+</mat-card>
+<!-- -------------------------------------------^In_stock---------------------------------------------------------------------- -->
+<mat-card class="add_card">
+    <mat-card-header>
+        <mat-card-title><h1>Work_Update</h1></mat-card-title>
+        <mat-card-subtitle>เพิ่มจำนวนชิ้นงานที่ทำได้</mat-card-subtitle>
+      </mat-card-header>
+    <mat-card class="inorder_card">
+        <mat-list>
+            <mat-list-item *ngFor="let file of files;let index = index">
+              <h5 mat-line>{{file.name}}</h5><input #workamonut class="input_order" (keyup.enter)="add(workamount.value)"
+              (blur)="add(workamount.value);">
+            </mat-list-item>
+          </mat-list>
+          <button mat-raised-button color="warn" (click)="onSave(workamount.value,index)">Confirm</button>
+    </mat-card>
+</mat-card>
+
+</div>

@@ -31,6 +31,7 @@ import { PmmatDialogComponent } from './pmcontrol/pmcontrol-dialog.component';
 
 import { StorematDialogComponent } from './store/store-dialog.component';
 
+
 import {MatStepperModule} from '@angular/material/stepper';
 
 import {
@@ -64,7 +65,7 @@ import { Stepsale2Component } from './stepsale/stepsale2.component';
 import { Sale2Component } from './sale2/sale2.component';
 import { SaleViewComponent } from './sale-view/sale-view.component';
 import { StoreComponent } from './store/store.component';
-
+import { ManagerComponent } from './manager/manager.component';
 enableProdMode();
 @NgModule({
   
@@ -110,6 +111,7 @@ enableProdMode();
     SaleViewComponent,
     StoreComponent,
     StorematDialogComponent,
+    ManagerComponent,
   ],
   entryComponents: [
     SaleDialogComponent,
