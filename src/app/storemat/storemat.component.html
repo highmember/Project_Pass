@@ -1,0 +1,63 @@
+
+<h1>Project Pass</h1>
+<form class="example-form">
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Search">
+    </mat-form-field>
+  
+<div style="width:80%; margin:0 auto;">
+    <div class="example-container mat-elevation-z8">
+      <mat-table #table [dataSource]="dataSource" >
+    
+        <!--- Note that these columns can be defined in any order.
+              The actual rendered columns are set as a property on the row definition" -->
+    
+        <!-- Position Column -->
+        <ng-container matColumnDef="position">
+          <mat-header-cell *matHeaderCellDef> ID_Project </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.position}} </mat-cell>
+        </ng-container>
+    
+        <!-- Name Column -->
+        <ng-container matColumnDef="name">
+          <mat-header-cell *matHeaderCellDef> Scope </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+        </ng-container>
+    
+        <!-- Weight Column -->
+        <ng-container matColumnDef="weight">
+          <mat-header-cell *matHeaderCellDef> Stock </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.weight}} </mat-cell>
+        </ng-container>
+    
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="symbol">
+            <mat-header-cell *matHeaderCellDef> Edit </mat-header-cell>
+            <mat-cell *matCellDef="let element"> 
+                <section class="example-section">
+                    <button mat-button (click)="openDialog()">Edit</button>
+                </section>
+            </mat-cell>
+          </ng-container>
+    
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="scope">
+          <mat-header-cell *matHeaderCellDef> Note </mat-header-cell>
+          <mat-cell *matCellDef="let element"> 
+              <section class="example-section">
+            
+              </section>
+          </mat-cell>
+        </ng-container>
+    
+      
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+      </mat-table>
+
+      
+
+    </div>
+    </div>
+    <br><br> <br><br>
+    <button mat-raised-button color="warn" >Confirm</button>

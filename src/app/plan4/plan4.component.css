@@ -1,0 +1,56 @@
+.card{
+    max-width: 800px;
+    position: relative;
+    
+}
+.card-Scope{
+  color: crimson;
+}
+mat-grid-tile {
+    background: rgb(237, 239, 240);
+  }
+  mat-progress-bar {
+    width: 80%;
+    height:15px ;
+  }
+.card-Scope{
+  max-width: 500px;
+}
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+  h1{
+    text-align: center;
+  }
+  .example-margin {
+  margin: auto;
+}
+
+.card-Main {
+    max-width: 1100px;
+    position: relative;
+    margin: auto;
+}
+.card-Scope{
+  max-width: 400px;
+}
+.mat-sort-header-container {
+  align-items: center;
+}
+.example-container {
+  display: flex;
+  flex-direction: column;
+  max-height: 500px;
+  min-width: 300px;
+}
+
+.mat-column-select {
+  overflow: visible;
+}
+
