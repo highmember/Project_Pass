@@ -1,0 +1,32 @@
+.order_card{
+    height: 400px;
+    width: 25%;
+    background-color: slategray;
+}
+.inorder_card{
+    height: 65%;
+    width: 85%;
+    background-color: whitesmoke;
+}
+.input_order{
+    width: 10%;
+    align-items: inherit;
+}
+/* ------------------------------------------------------------ */
+.stock_card{
+    height: 400px;
+    width: 25%;
+    left: 35%;
+    background-color: slategray;
+    position: absolute;
+    top: 1%;
+}
+/* -------------------------------------------------------------- */
+.add_card{
+    height: 500px;
+    width: 25%;
+    right: 0 ;
+    background-color: slategray;
+    position: absolute;
+    top: 1%;
+}
