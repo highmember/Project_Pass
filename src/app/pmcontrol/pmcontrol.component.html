@@ -1,15 +1,19 @@
 <p>
- 
+  <mat-card>
+    <mat-card-header>
+        <mat-card-title>ID_Project:</mat-card-title><mat-list-item>100888</mat-list-item> 
+        <mat-card-subtitle>Project Manager(PM):Mr.Somnuek dischauy</mat-card-subtitle>
+      </mat-card-header>
+</mat-card>
+
 <mat-card>
-  <mat-card-header>
-    <mat-card-title>ID_Project:</mat-card-title><mat-list-item>00001</mat-list-item> 
-  </mat-card-header>
-  <mat-grid-list cols="9" rowHeight="1:1">
-     <mat-grid-tile>Draft <button mat-raised-button>Edit!</button><mat-progress-bar mode="determinate" value="0"></mat-progress-bar></mat-grid-tile>
-     <mat-grid-tile>Part 1<button mat-raised-button>Edit!</button><mat-progress-bar mode="determinate" value="0"></mat-progress-bar></mat-grid-tile>
-    <mat-grid-tile>Part 2<button mat-raised-button>Edit!</button><mat-progress-bar mode="determinate" value="0"></mat-progress-bar></mat-grid-tile>
-    <mat-grid-tile>Part 3<button mat-raised-button>Edit!</button><mat-progress-bar mode="determinate" value="0"></mat-progress-bar></mat-grid-tile>
-    <mat-grid-tile>Part 4<button mat-raised-button>Edit!</button><mat-progress-bar mode="determinate" value="0"></mat-progress-bar></mat-grid-tile>
+  
+  <mat-grid-list cols="8" rowHeight="1:1">
+     <mat-grid-tile><mat-grid-tile-header>Draft</mat-grid-tile-header> <button mat-raised-button>Edit!</button><mat-progress-bar mode="determinate" value="0"></mat-progress-bar><mat-grid-tile-footer>0%</mat-grid-tile-footer></mat-grid-tile>
+     <mat-grid-tile><mat-grid-tile-header>Part 1</mat-grid-tile-header><button mat-raised-button>Edit!</button><mat-progress-bar mode="determinate" value="0"></mat-progress-bar><mat-grid-tile-footer>0%</mat-grid-tile-footer></mat-grid-tile>
+     <mat-grid-tile><mat-grid-tile-header>Part 2</mat-grid-tile-header><button mat-raised-button>Edit!</button><mat-progress-bar mode="determinate" value="0"></mat-progress-bar><mat-grid-tile-footer>0%</mat-grid-tile-footer></mat-grid-tile>
+     <mat-grid-tile><mat-grid-tile-header>Part 3</mat-grid-tile-header><button mat-raised-button>Edit!</button><mat-progress-bar mode="determinate" value="0"></mat-progress-bar><mat-grid-tile-footer>0%</mat-grid-tile-footer></mat-grid-tile>
+     <mat-grid-tile><mat-grid-tile-header>Part 4</mat-grid-tile-header><button mat-raised-button>Edit!</button><mat-progress-bar mode="determinate" value="0"></mat-progress-bar><mat-grid-tile-footer>0%</mat-grid-tile-footer></mat-grid-tile>
     
   </mat-grid-list>
   </mat-card>
@@ -19,6 +23,24 @@
       <button mat-raised-button color="warn" (click)="openDialog()">Add Material</button>
     </mat-card-actions>
   </mat-card>
+
+  <mat-card  >
+    <mat-card-title>Scope time and Process Work  </mat-card-title>
+    <mat-grid-list cols="2" rowHeight="2:1">
+        <mat-grid-tile><mat-grid-tile-header> <mat-form-field>
+            <textarea matInput placeholder="Start"></textarea>
+          </mat-form-field><p> To </p><mat-form-field>
+              <textarea matInput placeholder="End"></textarea>
+            </mat-form-field></mat-grid-tile-header>
+            <mat-progress-bar mode="determinate" value="0"></mat-progress-bar>
+        <mat-grid-tile-footer>0%</mat-grid-tile-footer></mat-grid-tile>
+        
+    <mat-grid-tile><mat-grid-tile-header>Process Work!</mat-grid-tile-header>
+      <mat-progress-bar mode="determinate" value="0"></mat-progress-bar>
+  <mat-grid-tile-footer>0%</mat-grid-tile-footer></mat-grid-tile>
+        
+      </mat-grid-list>
+</mat-card>
 
 
 </p>

@@ -1,0 +1,35 @@
+<div class="big">
+  <h1>Scope</h1>
+  <mat-card class="big-card">
+      <mat-card class="left-card">
+              <form class="example-form">
+                    <h4>Start</h4>
+                    <mat-form-field>
+                        
+                            <input matInput [matDatepicker]="picker1" placeholder="Choose a Date" [formControl]="Start">
+                            <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                            <mat-datepicker #picker1></mat-datepicker>
+                          </mat-form-field>
+                          <h4>End</h4>
+                          <mat-form-field>
+                            <input matInput [matDatepicker]="picker2" placeholder="Choose a Date" [formControl]="End">
+                            <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                            <mat-datepicker #picker2></mat-datepicker>
+                          </mat-form-field>
+                          <br>
+                          <br>
+                          <br>
+                          <h5>Status</h5>
+                          <mat-progress-bar mode="determinate" value="40" style="width: 50%"></mat-progress-bar><h5 id ='kk'>40%</h5>
+                          <br><br>
+                          <mat-card-actions>
+                              <button mat-raised-button color="primary" >Save</button>
+                          </mat-card-actions>
+                      <br />
+                    
+                    </form>
+      </mat-card>
+  <button mat-raised-button color="primary" >Next</button>
+  </mat-card>
+  
+  </div>

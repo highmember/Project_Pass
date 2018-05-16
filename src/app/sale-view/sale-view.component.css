@@ -1,0 +1,11 @@
+.card-Main {
+    max-width: 900px;
+    position: relative;
+}
+mat-grid-tile {
+    background: lightblue;
+  }
+  mat-progress-bar {
+    width: 80%;
+    height:20px ;
+  }
