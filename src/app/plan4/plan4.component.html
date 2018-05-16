@@ -1,0 +1,77 @@
+ <h1>Project Pass</h1>
+ <br><br><br>
+
+<mat-horizontal-stepper #stepper>
+  <mat-step [stepControl]="firstFormGroup">
+      <ng-template matStepLabel>เลือก PM</ng-template>
+    <form [formGroup]="firstFormGroup">
+      <mat-card class="card">
+        <mat-card-title>เลือก Manager</mat-card-title>
+        <button mat-button (click)="openDialog()">เลือก</button>
+      </mat-card>
+
+      <div>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="secondFormGroup">
+      <ng-template matStepLabel>เพิ่มแบบ</ng-template>
+    <form [formGroup]="secondFormGroup">
+      <mat-card class="card">
+      <mat-card-title>เพิ่มแบบ</mat-card-title>
+      <button mat-button (click)="openDialog2()">เพิ่ม</button>
+    </mat-card>
+
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Done</ng-template>
+    You are now done.
+    <div>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button (click)="stepper.reset()">Reset</button>
+    </div>
+  </mat-step>
+</mat-horizontal-stepper>
+<mat-card class="card-Main">
+    <div fxLayout="row">
+      <table style="width: 100%">
+        <tr>
+          <td>
+    <mat-card class="card-Scope">
+      <mat-card-content>
+        <h2 class="example-h2">Result</h2>
+        <div class="center">
+        <mat-progress-spinner class="example-margin" 
+            [color]="color"
+            [value]="value">
+            
+        </mat-progress-spinner>
+        {{value}} % </div>
+      </mat-card-content>
+    </mat-card>
+    </td>
+    <td>
+    <mat-card class="card-Scope">
+        <mat-card-content>
+          <h2 class="example-h2">Progress</h2>
+          <div class="center">
+          <mat-progress-spinner class="example-margin" 
+              [color]="color2"
+              [value]="value2">
+              
+          </mat-progress-spinner>
+          {{value2}} % </div>
+        </mat-card-content>
+      </mat-card>
+    </td>
+    </tr>
+    </table>
+    </div>
+     
+  
