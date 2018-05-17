@@ -29,6 +29,9 @@ import { SaleDialogComponent } from './sale/sale-dialog.component';
 import { PmcontrolComponent } from './pmcontrol/pmcontrol.component';
 import { PmmatDialogComponent } from './pmcontrol/pmcontrol-dialog.component';
 
+import { Plan4Component } from './plan4/plan4.component';
+import { StorematComponent } from './storemat/storemat.component';
+
 import { StorematDialogComponent } from './store/store-dialog.component';
 
 
@@ -61,15 +64,20 @@ import {
 
 } from '@angular/material';
 import { StepsaleComponent } from './stepsale/stepsale.component';
-import { Stepsale2Component } from './stepsale/stepsale2.component';
 import { Sale2Component } from './sale2/sale2.component';
 import { SaleViewComponent } from './sale-view/sale-view.component';
 import { StoreComponent } from './store/store.component';
 import { ManagerComponent } from './manager/manager.component';
+import {MatFormFieldModule} from '@angular/material';
+import {DialogDataExampleDialog} from './storemat/storemat.component';
+import {choose} from './plan4/plan4.component';
+import {Plus} from './plan4/plan4.component';
+import {TableSelectionExample} from './plan4/pick.component';
 enableProdMode();
 @NgModule({
   
   imports: [
+    MatAutocompleteModule,
     BrowserModule,
     FormsModule,
     BrowserAnimationsModule,
@@ -86,15 +94,21 @@ enableProdMode();
     MatDatepickerModule,
     MatSliderModule,
     MatNativeDateModule,
-    MatGridListModule,
     MatProgressBarModule,
-    MatStepperModule,HttpModule,
-    HttpClientModule,
-    MatNativeDateModule,
+    MatTableModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatMenuModule,
+    MatCheckboxModule,
+    MatGridListModule,
+    MatStepperModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    FormsModule,
     ReactiveFormsModule,
-    // NgxStepperModule,
-    MatAutocompleteModule,
-    
+    MatSelectModule,
+    MatSortModule,HttpModule,
+    HttpClientModule
     
     
   
@@ -106,17 +120,32 @@ enableProdMode();
     PmcontrolComponent,
     PmmatDialogComponent,
     StepsaleComponent,
-    Stepsale2Component,
     Sale2Component,
     SaleViewComponent,
     StoreComponent,
     StorematDialogComponent,
     ManagerComponent,
+    StorematComponent,
+    Plan4Component,
+    AppComponent,
+    StoreComponent,
+    Plan4Component,
+    DialogDataExampleDialog,
+    choose,
+    Plus,
+    TableSelectionExample,
+    StorematComponent,
+
+    
   ],
   entryComponents: [
     SaleDialogComponent,
     PmmatDialogComponent,
     StorematDialogComponent,
+    DialogDataExampleDialog,
+    choose,
+    Plus,
+    TableSelectionExample
   ],
   providers: [MatDatepickerModule ],
   bootstrap: [AppComponent]
