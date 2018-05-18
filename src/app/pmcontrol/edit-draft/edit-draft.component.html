@@ -1,0 +1,23 @@
+<mat-horizontal-stepper #stepper>
+  <mat-step [stepControl]="firstFormGroup">
+    <ng-template matStepLabel>Select Draft</ng-template>
+      <form [formGroup]="firstFormGroup">
+
+        </form>
+    </mat-step>
+<!-- ^^^^^^^^^^^^^^^^^^^^^^^^^1111111111111111111111111 -->
+  <mat-step [stepControl]="secondFormGroup">
+    <ng-template matStepLabel>Add flie</ng-template>
+      <form [formGroup]="secondFormGroup">
+
+        </form>
+    </mat-step>
+<!-- ^^^^^^^^^^^^^^^^^^^^^^^^^2222222222222222222222222 -->
+  <mat-step [stepControl]="thirdFormGroup">
+    <ng-template matStepLabel>Scope</ng-template>
+     <form [formGroup]="thirdFormGroup">
+
+     </form>
+   </mat-step>
+<!-- ^^^^^^^^^^^^^^^^^^^^^^^^^3333333333333333333333333 -->
+</mat-horizontal-stepper>
