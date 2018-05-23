@@ -1,0 +1,72 @@
+<h1 >Report</h1>
+<mat-card>
+        <mat-card-title>Id_ProJect</mat-card-title>
+        <form class="example-container">
+            <mat-form-field>
+                <input matInput disabled value="23051801">
+            </mat-form-field>
+            
+        </form>
+        <mat-card-title>Draft</mat-card-title>
+        <form class="example-container">
+                <mat-form-field>
+                    <input matInput disabled value="MR ...... ......">
+                </mat-form-field>
+                
+            </form>
+</mat-card>
+<mat-card>
+    <form>
+        <mat-card-title>Blueprint</mat-card-title>
+        <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                  <mat-panel-title>
+                    Product 1
+                  </mat-panel-title>
+                  <mat-panel-description>
+                    จำนวนแบบ ........
+                  </mat-panel-description>
+                </mat-expansion-panel-header>
+            
+                <mat-list role="list1">
+                        <mat-list-item role="listitem">Item 1</mat-list-item>
+                        <mat-list-item role="listitem">Item 2</mat-list-item>
+                        <mat-list-item role="listitem">Item 3</mat-list-item>
+                </mat-list>
+              </mat-expansion-panel>
+
+              <mat-expansion-panel>
+              <mat-expansion-panel-header>
+                    <mat-panel-title>
+                      Product 2
+                    </mat-panel-title>
+                    <mat-panel-description>
+                      จำนวนแบบ .........
+                    </mat-panel-description>
+                  </mat-expansion-panel-header>
+                  <mat-list role="list2">
+                          <mat-list-item role="listitem">Item 1</mat-list-item>
+                          <mat-list-item role="listitem">Item 2</mat-list-item>
+                          <mat-list-item role="listitem">Item 3</mat-list-item>
+                  </mat-list>
+                </mat-expansion-panel>
+    </form>
+</mat-card>
+
+<mat-card>
+        
+        <mat-form-field>
+                <h4>Start</h4>
+                <input matInput [matDatepicker]="dp1" disabled>
+                    <mat-datepicker-toggle matSuffix [for]="dp1"></mat-datepicker-toggle>
+                    <mat-datepicker #dp1></mat-datepicker>
+           </mat-form-field>
+       <mat-form-field>
+            <h4>End</h4>
+               <input matInput [matDatepicker]="dp2" disabled>
+                <mat-datepicker-toggle matSuffix [for]="dp2"></mat-datepicker-toggle>
+                <mat-datepicker #dp2></mat-datepicker>
+       </mat-form-field>
+            
+            
+</mat-card>
