@@ -1,35 +1,9 @@
-.example-radio-group {
-    display: inline-flex;
-    flex-direction: column;
-  }
-  
-  .example-radio-button {
-    margin: 3px;
-    font-size: 15px;
-    
-  }
-  
-  .example-selected-value {
-    margin: 10px 0;
-  }
 
-  .example-card {
-    max-width: 400px;
-  }
-
-  .header{
-      font-size: 30px;
-  }
-  .buttonC{
-      margin-left:  150px;
-  }
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ stepsale ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
   .big-card {
     max-width: 700px;
     display: flex;
     margin: auto;
-  
-    
   }
   .left-card {
     max-width: 600px;
@@ -38,13 +12,7 @@
     box-sizing: border-box;
     margin: 0rem .25em;
   }
-  .right-card {
-    max-width: 400px;
-    text-align: left;
-    flex: 1 0 500px;  
-    box-sizing: border-box;
-    margin: 0rem .25em;
-  }
+
   h1 {
     text-align: center;
 }
@@ -52,6 +20,3 @@
     justify-content: center;
     align-items: center;
   }
-#kk {
-    text-align: center;
-}

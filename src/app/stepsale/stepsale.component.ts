@@ -1,4 +1,4 @@
-import { Component, OnInit,Inject } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
 import {Sort} from '@angular/material';
@@ -7,7 +7,7 @@ import {Observable} from 'rxjs/Observable';
 import {startWith} from 'rxjs/operators/startWith';
 import {map} from 'rxjs/operators/map';
 import {MatTableDataSource} from '@angular/material';
-import {SelectionModel} from '@angular/cdk/collections'
+import {SelectionModel} from '@angular/cdk/collections';
 
 @Component({
   selector: 'app-stepsale',
@@ -15,25 +15,23 @@ import {SelectionModel} from '@angular/cdk/collections'
   styleUrls: ['./stepsale.component.css']
 })
 export class StepsaleComponent implements OnInit {
-  proJtype: string;
+  proJtype = '';
   color2 = 'warn';
   value2 = 40;
   color = 'primary';
   value = 20;
+  tOP = '';
   firstFormGroup: FormGroup;
   secondFormGroup: FormGroup;
   thirdFormGroup: FormGroup;
   fouthFormGroup: FormGroup;
   fifthFormGroup: FormGroup;
-  
-
   constructor(private _formBuilder: FormBuilder) { this.codeCtrl = new FormControl();
     this.filteredCodes = this.codeCtrl.valueChanges
       .pipe(
         startWith(''),
         map(codes => codes ? this.filterCodes(codes) : this.Codes.slice())
-      ); 
-    
+      );
 
     this.nameCtrl = new FormControl();
       this.filteredName = this.nameCtrl.valueChanges
@@ -59,25 +57,25 @@ export class StepsaleComponent implements OnInit {
       fifthCtrl: ['', Validators.required]
     });
   }
-
   rows = {
     Code: Number,
     Cus_Name: String,
     Tel: Number,
     Address: String
-  }
+  };
     filterCodes(arg0: any): any {
-        throw new Error("Method not implemented.");
+        throw new Error('Method not implemented.');
     }
     filtername(arg0: any): any {
-      throw new Error("Method not implemented.");
+      throw new Error('Method not implemented.');
   }
-  typeOfProJ = [
+
+     typeOfProJ = [
     'Project Jon',
     'MASS',
     'Automobile'
   ];
-  
+
   codeCtrl: FormControl;
   nameCtrl: FormControl;
   filteredCodes: Observable<any[]>;
@@ -87,48 +85,40 @@ export class StepsaleComponent implements OnInit {
     {
       codes: 888,
       detail: '....'
-      
     },
     {
       codes: 889,
       detail: '....'
-      
+
     },
     {
       codes: 890,
       detail: '....'
-      
+
     },
     {
       codes: 420,
       detail: '....'
-      
+
     }
 ]
 
 CusName: cus[] = [
   {
     name: '.....'
-    
+
   },
   {
     name: '....'
   },
   {
     name: '.....'
-    
+
   },
   {
     name: '.....'
   }
 ]
-//   filterStates(name: string) {
-//         return this.states.filter(state =>
-//           state.name.toLowerCase().indexOf(name.toLowerCase()) === 0);
-//       }
-
-
-  
   add(Code, Cus_Name, Tel, Address) {
   }
 
@@ -141,7 +131,7 @@ CusName: cus[] = [
         Address: Address
       }
     }
-  }  
+  }
 
   displayedColumns = ['select', 'position', 'name', 'Lname'];
   dataSource = new MatTableDataSource<Element>(ELEMENT_DATA);
@@ -177,13 +167,9 @@ const ELEMENT_DATA: Element[] = [
   {position: 6, name: 'ลาภเป็ด', Lname: 'ลิเวอ'},
   {position: 7, name: 'สุดแกร่ง', Lname: 'แมนยู'}
 ];
-
-    
-    
-    export class Code {
+export class Code {
         constructor(public codes: number, public detail: string) { }
       }
-      export class cus {
+ export class cus {
         constructor(public name: string) { }
-      }
-    
+      } 

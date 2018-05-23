@@ -15,19 +15,27 @@
         <!-- Position Column -->
         <ng-container matColumnDef="position">
           <mat-header-cell *matHeaderCellDef> ID_Project </mat-header-cell>
-          <mat-cell *matCellDef="let element"> {{element.position}} </mat-cell>
+          <mat-cell *matCellDef="let element">
+              <button mat-button > {{element.position}} </button>
+            </mat-cell>
         </ng-container>
     
         <!-- Name Column -->
         <ng-container matColumnDef="name">
           <mat-header-cell *matHeaderCellDef> Scope </mat-header-cell>
-          <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+          <mat-cell *matCellDef="let element">
+          <button mat-button > {{element.name}} </button>
+        </mat-cell>
         </ng-container>
     
         <!-- Weight Column -->
         <ng-container matColumnDef="weight">
           <mat-header-cell *matHeaderCellDef> Stock </mat-header-cell>
-          <mat-cell *matCellDef="let element"> {{element.weight}} </mat-cell>
+          <section class="example-section">
+              <mat-cell *matCellDef="let element">
+              <button mat-button (click)="openDialog2()">{{element.weight}}</button>
+            </mat-cell>
+            </section>
         </ng-container>
     
         <!-- Symbol Column -->

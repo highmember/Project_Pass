@@ -99,13 +99,15 @@
     <ng-template matStepLabel>Scope</ng-template>
     <form [formGroup]="thirdFormGroup">
       <app-sale2></app-sale2>
+      <br>
+      <button mat-button matStepperPrevious class="but" mat-raised-button color="warn">Back</button>
     </form>
   </mat-step>
   <!-- 44444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444 -->
   <mat-step [stepControl]="fouthFormGroup">
     <ng-template matStepLabel>เลือก PM</ng-template>
     <form [formGroup]="fouthFormGroup">
-      <app-store></app-store>
+      <app-choose-pm></app-choose-pm>
       <br>
       <button mat-button matStepperPrevious class="butt" mat-raised-button color="warn">Back</button>
       <button mat-button matStepperNext class="buttt" mat-raised-button color="primary">Next</button>
@@ -116,72 +118,7 @@
   <mat-step [stepControl]="fifthFormGroup">
     <ng-template matStepLabel>View</ng-template>
     <form [formGroup]="fifthFormGroup">
-      <mat-card>
-        <mat-card-header>
-          <mat-card-title>ID_Project:</mat-card-title>
-          <mat-list-item>100888</mat-list-item>
-          <mat-card-subtitle>Project Manager(PM):Mr.Somnuek dischauy</mat-card-subtitle>
-        </mat-card-header>
-      </mat-card>
-      <mat-card>
-        <mat-grid-list cols="9" rowHeight="1:1">
-          <mat-grid-tile>
-            <mat-grid-tile-header>Draft</mat-grid-tile-header>
-            <mat-progress-bar mode="determinate" value="100"></mat-progress-bar>
-            <mat-grid-tile-footer>100%</mat-grid-tile-footer>
-          </mat-grid-tile>
-          <mat-grid-tile>
-            <mat-grid-tile-header>Part 1</mat-grid-tile-header>
-            <mat-progress-bar mode="determinate" value="100"></mat-progress-bar>
-            <mat-grid-tile-footer>100%</mat-grid-tile-footer>
-          </mat-grid-tile>
-          <mat-grid-tile>
-            <mat-grid-tile-header>Part 2</mat-grid-tile-header>
-            <mat-progress-bar mode="determinate" value="50"></mat-progress-bar>
-            <mat-grid-tile-footer>50%</mat-grid-tile-footer>
-          </mat-grid-tile>
-          <mat-grid-tile>
-            <mat-grid-tile-header>Part 3</mat-grid-tile-header>
-            <mat-progress-bar mode="determinate" value="0"></mat-progress-bar>
-            <mat-grid-tile-footer>0%</mat-grid-tile-footer>
-          </mat-grid-tile>
-          <mat-grid-tile>
-            <mat-grid-tile-header>Part 4</mat-grid-tile-header>
-            <mat-progress-bar mode="determinate" value="0"></mat-progress-bar>
-            <mat-grid-tile-footer>
-              0%</mat-grid-tile-footer>
-          </mat-grid-tile>
-        </mat-grid-list>
-      </mat-card>
-      <mat-card>
-        <mat-card-title>Material</mat-card-title>
-        <mat-card-actions>
-          <mat-accordion>
-            <mat-expansion-panel>
-
-              <mat-expansion-panel-header>
-                <mat-panel-title>
-                  Material
-                </mat-panel-title>
-                <mat-panel-description>
-                  Material in this project
-                </mat-panel-description>
-              </mat-expansion-panel-header>
-              <p>Item 1</p>
-              <p>Item 2</p>
-              <p>Item 3</p>
-              <p>Item 4</p>
-              <p>Item 5</p>
-              <p>Item 6</p>
-              <p>Item 7</p>
-              <p>Item 8</p>
-              <p>Item 9</p>
-              <p>Item 10</p>
-              <p>Item 11</p>
-            </mat-expansion-panel>
-          </mat-accordion>
-        </mat-card-actions>
-      </mat-card>
+      <app-sale-view></app-sale-view>
       <br>
 
       <mat-card class="card-Man">

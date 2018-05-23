@@ -4,7 +4,7 @@ import {ReactiveFormsModule} from '@angular/forms';
 import {HttpModule} from '@angular/http';
 import {BrowserModule} from '@angular/platform-browser';
 import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
-import { NgModule,Component, Output, EventEmitter, ViewChild, ElementRef, Input} from '@angular/core';
+import { NgModule, Component, Output, EventEmitter, ViewChild, ElementRef, Input} from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
@@ -34,7 +34,7 @@ import { StorematComponent } from './storemat/storemat.component';
 
 import { StorematDialogComponent } from './store/store-dialog.component';
 
-
+import { ChoosePmComponent } from './choose-pm/choose-pm.component';
 import {MatStepperModule} from '@angular/material/stepper';
 
 import {
@@ -56,12 +56,6 @@ import {
   MatTabsModule,
   MatToolbarModule,
   MatTooltipModule,
-  
-  
-  
-
-
-
 } from '@angular/material';
 import { StepsaleComponent } from './stepsale/stepsale.component';
 import { Sale2Component } from './sale2/sale2.component';
@@ -70,12 +64,12 @@ import { StoreComponent } from './store/store.component';
 import { ManagerComponent } from './manager/manager.component';
 import {MatFormFieldModule} from '@angular/material';
 import {DialogDataExampleDialog} from './storemat/storemat.component';
+import {DialogStock} from './storemat/storemat.component';
 import {choose} from './plan4/plan4.component';
 import {Plus} from './plan4/plan4.component';
 import {TableSelectionExample} from './plan4/pick.component';
 enableProdMode();
 @NgModule({
-  
   imports: [
     MatAutocompleteModule,
     BrowserModule,
@@ -107,11 +101,8 @@ enableProdMode();
     FormsModule,
     ReactiveFormsModule,
     MatSelectModule,
-    MatSortModule,HttpModule,
-    HttpClientModule
-    
-    
-  
+    MatSortModule, HttpModule,
+    HttpClientModule,
   ],
   declarations: [
     AppComponent,
@@ -135,8 +126,8 @@ enableProdMode();
     Plus,
     TableSelectionExample,
     StorematComponent,
-
-    
+    DialogStock,
+    ChoosePmComponent
   ],
   entryComponents: [
     SaleDialogComponent,
@@ -145,7 +136,9 @@ enableProdMode();
     DialogDataExampleDialog,
     choose,
     Plus,
-    TableSelectionExample
+    TableSelectionExample,
+    DialogStock,
+    ChoosePmComponent
   ],
   providers: [MatDatepickerModule ],
   bootstrap: [AppComponent]
