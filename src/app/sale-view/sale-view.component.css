@@ -3,9 +3,14 @@
     position: relative;
 }
 mat-grid-tile {
-    background: lightblue;
+    background: rgb(236, 206, 241);
   }
   mat-progress-bar {
     width: 80%;
     height:20px ;
+  }
+  mat-grid-tile-header
+  {
+   background-color: aliceblue;
+   color : red;
   }
