@@ -34,7 +34,11 @@ import { StorematComponent } from './storemat/storemat.component';
 
 import { StorematDialogComponent } from './store/store-dialog.component';
 
+
 import { ChoosePmComponent } from './choose-pm/choose-pm.component';
+
+import {reportdiComponent} from './pmcontrol/edit-draft/reportdi'
+
 import {MatStepperModule} from '@angular/material/stepper';
 
 import {
@@ -68,6 +72,8 @@ import {DialogStock} from './storemat/storemat.component';
 import {choose} from './plan4/plan4.component';
 import {Plus} from './plan4/plan4.component';
 import {TableSelectionExample} from './plan4/pick.component';
+import { EditDraftComponent } from './pmcontrol/edit-draft/edit-draft.component';
+
 enableProdMode();
 @NgModule({
   imports: [
@@ -101,8 +107,13 @@ enableProdMode();
     FormsModule,
     ReactiveFormsModule,
     MatSelectModule,
+
     MatSortModule, HttpModule,
     HttpClientModule,
+
+    MatSortModule,HttpModule,
+    HttpClientModule,
+    MatTabsModule
   ],
   declarations: [
     AppComponent,
@@ -127,7 +138,9 @@ enableProdMode();
     TableSelectionExample,
     StorematComponent,
     DialogStock,
-    ChoosePmComponent
+    ChoosePmComponent,
+    EditDraftComponent,
+    reportdiComponent
   ],
   entryComponents: [
     SaleDialogComponent,
@@ -139,6 +152,7 @@ enableProdMode();
     TableSelectionExample,
     DialogStock,
     ChoosePmComponent
+    reportdiComponent
   ],
   providers: [MatDatepickerModule ],
   bootstrap: [AppComponent]
