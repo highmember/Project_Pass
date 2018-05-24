@@ -30,7 +30,8 @@
         <mat-card class="big-card-a">
           <mat-card class="left-card">
             <form class="example-form">
-              <mat-form-field class="example-full-width">
+              <h3>Custumer</h3>
+              <!-- <mat-form-field class="example-full-width">
                 <input matInput placeholder="Code" aria-label="codes" [matAutocomplete]="auto" [formControl]="codeCtrl" #Code (keyup.enter)="add(Code.value)"
                   (blur)="add(Code.value);">
                 <mat-autocomplete #auto="matAutocomplete">
@@ -39,7 +40,7 @@
                     <small>Population: {{state.detail}}</small>
                   </mat-option>
                 </mat-autocomplete>
-              </mat-form-field>
+              </mat-form-field> -->
               <br>
               <mat-form-field class="example-full-width">
                 <input matInput placeholder="Customer_Name" aria-label="name" [matAutocomplete]="auto" [formControl]="nameCtrl" #Cus_Name
@@ -66,6 +67,19 @@
             </form>
           </mat-card>
           <mat-card class="right-card">
+              <h3>Project</h3>
+              <mat-form-field class="example-full-width">
+                  <input matInput placeholder="Id_Project" aria-label="codes" [matAutocomplete]="auto" [formControl]="codeCtrl" #Code (keyup.enter)="add(Code.value)"
+                    (blur)="add(Code.value);">
+                  <mat-autocomplete #auto="matAutocomplete">
+                    <mat-option *ngFor="let state of filteredCodes | async" [value]="state.codes">
+                      <span>{{ state.codes }}</span> |
+                      <small>Population: {{state.detail}}</small>
+                    </mat-option>
+                  </mat-autocomplete>
+                </mat-form-field>
+                <mat-divider></mat-divider>
+              <h3>Blueprint</h3>
             <mat-card-header>
               <mat-card-title>มีแบบเป็นแบบไหน ?</mat-card-title>
             </mat-card-header>
